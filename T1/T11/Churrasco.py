@@ -1,24 +1,25 @@
-from Pessoa import Pessoa
-
 class Churrasco:
-	def __init__(self, Pessoa):
-		self.pessoa = Pessoa
-		self.qtCarne = 0
-		self.contador = 0
+    qtCarne = 0
+    contador = 0
 
-	def verificarConsumo(self):		
-        if ((Pessoa.getIdade <= 3) or (Pessoa.getVegetariano == True)):
-	        self.qtCarne += 0
-		elif ((Pessoa.getIdade > 3) and (Pessoa.getIdade <= 12)):
-			self.qtCarne += 1
-		else:
-			self.qtCarne += 2
+    def __init__(self):
+        pass
 
-		self.contador += 1
+    def verificarConsumo(self, pessoa):
+        if (pessoa.idade <= 3):
+            pass
+        elif (pessoa.vegetariana == True):
+            pass
+        elif (pessoa.idade > 3) and (12 >= pessoa.idade):
+            self.qtCarne = self.qtCarne + 1
+        else:
+            self.qtCarne = self.qtCarne + 2
 
-	def mediaConsumo(self, qtCarne, contador):
-		self.media = self.qtCarne / self.contador
-		print ("A media de kg de carne por pessoa é: ", self.media, " kgs")
+        self.contador = self.contador + 1
 
-	def totalConsumo(self):
-		print ("O total de kg de carne por pessoa é: ", self.qtCarne, " kgs")
+    def totalConsumo(self):
+        print("O total de kg de carne é: ", self.qtCarne, " kgs")
+
+    def mediaConsumo(self, c, i):
+        media = c / i
+        print("A media de kg de carne por pessoa é: ", media, " kgs")
