@@ -21,12 +21,8 @@ class Cliente:
             self.__saldo -= val
             return self.__saldo
         else:
-            print(self.getRestricao()," reais, saldo insuficiente para um saque neste valor!")
+            print(self.checarSaldo()," reais, saldo insuficiente para um saque neste valor!")
             return 0
 
-    def getRestricao(self):
-        __restricao = self.getSaldo()+self.getLimite()
-        return __restricao
-
     def checarSaldo(self):
-        return self.getRestricao()
+        return self.__saldo+self.__limite
