@@ -16,4 +16,4 @@ class Candidato:
         return self.__partido
 
     def setPartido(self, __partido):
-        self.partido = __partido
+        self.__partido = __partido

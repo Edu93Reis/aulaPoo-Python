@@ -6,13 +6,15 @@ class Partido:
         self.__num = __num
 
     def getNome(self):
-        self.__nome
+        return self.__nome
 
     def getIdeologia(self):
-        self.__ideologia
+        return self.__ideologia
 
     def getSigla(self):
-        self.__sigla
+        return self.__sigla
 
     def getNum(self):
-        self.__num
+        return self.__num
+
+        

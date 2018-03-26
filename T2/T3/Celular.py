@@ -26,7 +26,7 @@ class Celular:
         if(self.__ligado == False):
             if(self.__bateria.getCarga()>20):
                 self.__ligado = True
-                print("Usuário: " + self.getUser()+", Nome: "+"nome???")
+                print("Usuário: ", self.getUser(), ", ID Celular: ", self.getId())
             elif(self.__bateria.getCarga() == 0):
                 pass
             else:

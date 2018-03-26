@@ -9,7 +9,7 @@ class Teste():
     print(b1.Descarrega())
     print(b1.Descarrega())
     c1 = Celular("Eduardo", b1)
-    print("ID do celular: ",c1.getId())
+    c1.ligaCelular()
     c1.tocaSom()
     c1.desligaCelular()
     c1.ligaCelular()
@@ -24,4 +24,3 @@ class Teste():
     print(b2.getCarga())
     c2 = Celular("Caio", b1)
     c2.ligaCelular()
-    print("ID do celular: ", c2.getId())
