@@ -21,11 +21,14 @@ class Produtos:
 
     def getTipo(self):
         if(self.__tipo == Livros.Epub):
-            return "Epub"
+            return Livros.Epub.value
+        #    return "Epub"
         elif(self.__tipo == Livros.Livro_Fisico):
-            return "Livros Fisícos"
+            return Livros.Livro_Fisico.value
+        #    return "Livros Fisícos"
         elif(self.__tipo == Livros.PDF):
-            return "PDF"
+            return Livros.PDF.value
+        #    return "PDF"
 
     def precoLivro(self, tipo):
         if(self.__tipo == Livros.Epub):

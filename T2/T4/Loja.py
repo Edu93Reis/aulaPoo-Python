@@ -5,7 +5,7 @@ def Loja():
     p1 = Produtos()
     p1.setTipo(Livros.Epub)
     p1.precoLivro(Livros.Epub)
-    print("O preço do Epub é: ",p1.getTipo()," é: ",p1.getTipo(),"reais")
+    print("O preço do Epub é: ",p1.getTipo()," é: ",p1.getPreco(),"reais")
     p1.setDescription("Epub é divertido")
     print("Descrição EPUB: ",p1.getDescription())
 
