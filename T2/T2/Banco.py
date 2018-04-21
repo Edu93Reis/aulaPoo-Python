@@ -1,7 +1,7 @@
 from Doc import Doc
 from Cliente import Cliente
 
-def Banco():
+def banco():
     c1 = Cliente("Eduardo", 1200.00, 5000.00)
     c2 = Cliente("Carlos", 2000.00, 900.00)
 
@@ -29,5 +29,4 @@ def Banco():
     d1.transferir(c1, c2, 5900.00)
     print("Saldo atualizado do cliente, ", c1.getNome(),", é: ", c1.checarSaldo())
     print("Saldo atualizado do cliente, ", c2.getNome(),", é: ", c2.checarSaldo())
-
-Banco()
+banco()

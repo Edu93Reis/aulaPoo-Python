@@ -20,8 +20,8 @@ class Bateria:
         else:
             self.__carga = __carga
     
-    def Carrega(self):
-        if(self.__carga<95):
+    def carrega(self):
+        if(self.__carga<=95):
             self.__carga += 5
         else:
             print("Bateria no limite, impossível aumentar a carga!!")
@@ -29,7 +29,7 @@ class Bateria:
         
         return self.__carga
     
-    def Descarrega(self):
+    def descarrega(self):
         if(self.getCarga()>=10):
             self.__carga -=10
         else:

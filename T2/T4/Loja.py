@@ -1,7 +1,7 @@
 from Livros import Livros
 from Produtos import Produtos
 
-def Loja():
+def loja():
     p1 = Produtos()
     p1.setTipo(Livros.Epub)
     p1.precoLivro(Livros.Epub)
@@ -22,4 +22,4 @@ def Loja():
     p3.setDescription("PDF")
     print("Descrição PDF: ",p3.getDescription())
     
-Loja()
+loja()

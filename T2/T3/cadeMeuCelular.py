@@ -3,11 +3,11 @@ from Bateria import Bateria
 
 class Teste():
     b1 = Bateria(70)
-    print(b1.Carrega())
-    print(b1.Carrega())
-    print(b1.Carrega())
-    print(b1.Descarrega())
-    print(b1.Descarrega())
+    print(b1.carrega())
+    print(b1.carrega())
+    print(b1.carrega())
+    print(b1.descarrega())
+    print(b1.descarrega())
     c1 = Celular("Eduardo", b1)
     c1.ligaCelular()
     c1.tocaSom()
