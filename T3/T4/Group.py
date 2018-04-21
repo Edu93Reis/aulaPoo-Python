@@ -10,9 +10,9 @@ class Group(Usuario):
     def descreveGroup(self):
         ("Grupo permite o uso por grupo de usuários ..")
 
-    def groupboard(self):
+    def groupBoard(self):
         op = ""
-        
+
         while(not (op == "s" or op == "n")):
             op = input("Ao apagar o grupo você apagará todos os usuários contidos nele, deseja prosseguir? [s/n] .. ")
             if(not op == "s" or not op == "s"):

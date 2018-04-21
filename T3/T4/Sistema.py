@@ -26,8 +26,8 @@ class Sistema():
     g2.despedidaGroup()
 		
     r2 = Root("root")
-    r2.boasVindas();
-    r2.descreveRoot();
-    r2.excluirTodos();
-    r2.despedidaRoot();
+    r2.boasVindas()
+    r2.descreveRoot()
+    r2.excluirTodos()
+    r2.despedidaRoot()
 		
