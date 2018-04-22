@@ -1,8 +1,8 @@
 from Usuario import Usuario
 
 class Group(Usuario):
-    def __init__(self,__login):
-        super.__init__(__login)
+    def __init__(self,_login):
+        super().__init__(_login)
 
     def despedidaGroup(self):
         print("A sessão está sendo encerrada .. ")
@@ -18,7 +18,7 @@ class Group(Usuario):
             if(not op == "s" or not op == "s"):
                 print("Entrada inválida, digite [s] para sim ou [n] para não ..")
             
-        if(op.Lower() == "s"):
+        if(op.lower() == "s"):
             ("Grupo deletado com sucesso!!")
         else:
             ("Operação cancelada!!")

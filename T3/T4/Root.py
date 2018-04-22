@@ -1,11 +1,11 @@
 from Usuario import Usuario
 
 class Root(Usuario):
-    def __init__(self, __login):
-        super.__init__(__login)
+    def __init__(self, _login):
+        super().__init__(_login)
 
     def despedidaRoot(self):
-        print("Você está encerrando a sessão", super.__login, ", todos os usuarios serão encerrados automaticamente ..")
+        print("Você está encerrando a sessão", self._login, ", todos os usuarios serão encerrados automaticamente ..")
 
     def descreveRoot(self):
         print("Superusuário, possui o controle total do sistema")

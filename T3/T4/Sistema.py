@@ -4,7 +4,7 @@ from Regular import Regular
 from Group import Group
 from Root import Root
 
-class Sistema():
+def Sistema():
     u = Usuario("Eduardo")	
     u.boasVindas()
 		
@@ -30,4 +30,5 @@ class Sistema():
     r2.descreveRoot()
     r2.excluirTodos()
     r2.despedidaRoot()
-		
+	
+Sistema()
