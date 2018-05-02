@@ -13,13 +13,13 @@ class Estante:
         return self.__categoria
 
     def getLivros(self):
-        y = 0
+        __y = 0
         for(livro in self.__livros):
-            print("Livro:", y)
+            print("Livro:", __y)
             print("Título:", livro.__getNome())
             print("Autor:", livro.__getAutor())
             print("Ano:", livro.__getAno())
-            y++
+            __y++
     
     def getLivro(self):
         return self.__livros

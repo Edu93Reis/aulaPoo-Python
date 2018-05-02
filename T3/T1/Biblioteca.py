@@ -1,55 +1,58 @@
 from Estante import Estante
+from Livro import Livro
 from Categoria import Categoria
 
 class Biblioteca:
-    def __init__(self, nome):
-        self.nome = nome
-        self.estante = []
+    def __init__(self, __nome):
+        self.__nome = __nome
+        self.__estante = []
 
     def getNome(self):
-        return self.nome
+        return self.__nome
 
     def getEstante(self, i):
-        if self.estante(i) in self.estante:
-            return self.estante(i)
+        if(self.__estante(i) in self.__estante):
+            return self.__estante(i)
 
     def getEstante(self):
-        return self.estante
+        return self.__estante
 
-    def inserirEstante(self, estante):
-        if(self.estante is not Null):
-            self.estante.append(estante)
+    def inserirEstante(self, __estante):
+        if(self.__estante is not Null):
+            self.__estante.append(__estante)
         else:
             print("Entre com valor válido")
 
     def criarestante(self):
-        nome = ""
-        categoria = ""
-        while(nome == "" or categoria == ""):
-            input("Digite o nome da estante: ")
-            input("Digite o categoria da estante: ")
+        __nome = ""
+        __categoria = ""
+        while(__nome == "" or __categoria == ""):
+            __nome = input("Digite o nome da estante: ")
+            __categoria = input("Digite o categoria da estante: ")
             
-            if(categoria == ""):
+            if(__categoria == ""):
                 print("Preencha a categoria: ")
-            elif(nome == ""):
+            elif(__nome == ""):
                 print("Preencha o nome")
             else:
+                __e = Estante(__nome, __categoria)
+                self.inserirEstante(__e)
                 print("Estante criada com sucesso")
     
     def listarfilosofia(self):
-        novo = []
-        for(estante in Estante):
-            if(self.estante.getCategoria() == Categoria.Categoria.Filosofia):
-                for(livro in Estante):
+        __novo = []
+        for(estante in self.__estante):
+            if(self.__estante.getCategoria() == Categoria.Categoria.Filosofia):
+                for(livro in self.__estante):
                     novo.append(estante).getLivro()
     return novo
 
     def contarCiencia(self):    
-        cont = 0
+        __cont = 0
         for(estante in Estante):
             if(estante.getCategoria() == Categoria.Categoria.Ciência):
-                cont = cont+ self.estante.len(getLivro())
-        return cont
+                __cont = __cont+ self.estante.len(getLivro())
+        return __cont
 
     def listarAutores(self):
         lista = []
@@ -62,15 +65,18 @@ class Biblioteca:
     return lista
 
     def listarTudo(self):
-        for(estante in Estante):
+        for(estante in self.__estante):
             print("Estante:", estante.getNome())
             estante.getLivro()
 
     def escolherCategoria(self):
         opt = input(print("Digite: 1 - Filosofia, 2 - Ciência, 3 - Literatura."))
 
-        return {
-            '1' : Categoria.Categoria.Filosofia,
-            '2' : Categoria.Categoria.Ciência,
-            '3' : Categoria.Categoria.Literatura
-        }.get(x, null)
+        if(opt == '1'):
+            return Categoria.Categoria.Filosofia,
+        elif(opt == '2'):
+            return Categoria.Categoria.Ciência,
+        elif(opt == '3'):    
+            return Categoria.Categoria.Literatura
+        else:
+            return "Categoria inválida!"
