@@ -40,11 +40,13 @@ class Biblioteca:
                 print("Estante criada com sucesso")
     
     def listarfilosofia(self):
-        __novo = []
-        for(estante in self.__estante):
-            if(self.__estante.getCategoria() == Categoria.Categoria.Filosofia):
+        __novo = Estante()
+        __recebe = []
+        for(estante in __novo):
+            if(estante.getCategoria() == Categoria.Categoria.Filosofia):
                 for(livro in self.__estante):
-                    novo.append(estante).getLivro()
+                    __recebe.append(estante).livro.getLivro()
+                    #novo.append(estante).getLivro()
     return novo
 
     def contarCiencia(self):    

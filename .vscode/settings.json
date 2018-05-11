@@ -1,0 +1,6 @@
+{
+    "python.unitTest.pyTestArgs": [
+        "T3"
+    ],
+    "python.unitTest.pyTestEnabled": true
+}
