@@ -4,10 +4,10 @@ class Regular(Usuario):
     def __init__(self, _login):
         super().__init__(_login)
 
-    def despedidaRegular(self):
+    def despedida(self):
         print("Até mais", self._login)
 
-    def descreveRegular(self):
+    def descreve(self):
         print("Usuario Regular possui permissões intermediárias de uso do sistema ..")
 
     def dashboard(self):

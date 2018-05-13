@@ -2,4 +2,5 @@ from Imposto import Imposto
 
 class ICMS(Imposto):
     def __init__(self):
-        super().__init__(0.90)
+        self._aliquota = _aliquota = 0.90
+        super(ICMS, self).__init__(_aliquota)

@@ -11,7 +11,7 @@ def Teste():
 
     p1.getProduto()
     p1.setImposto(icms)
-    p1.getProduto()
-    p2.getProduto()
+    #p1.getProduto()
+    #p2.getProduto()
 
 Teste()

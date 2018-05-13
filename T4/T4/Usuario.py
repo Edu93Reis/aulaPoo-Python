@@ -5,14 +5,9 @@ class Usuario:
     def boasVindas(self):
         print("Bem-vindo,", self._login)
 
-    def descreve(self, datatype, args):
-        if(datatype == 'Usuario'):
-            print("Bem Vindo: "+ self._login)
-        else:
-            pass
+    def descreve(self):
+        print("Bem Vindo: "+ self._login)
+       
     
-    def despedida(self, datatype, usuario):
-        if(datatype == 'Usuario'):
-            usuario.despedida()
-        else:
-            pass
+    def despedida(self):
+        pass

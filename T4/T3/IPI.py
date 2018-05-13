@@ -3,4 +3,5 @@ from Imposto import Imposto
 class IPI(Imposto):
 
     def __init__(self):
-        super.__init__(0.95)
+        self._aliquota = _aliquota = 0.90
+        super(IPI, self).__init__(_aliquota)
