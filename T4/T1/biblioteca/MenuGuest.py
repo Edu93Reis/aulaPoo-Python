@@ -10,11 +10,14 @@ class MenuGuest:
     def menu(self):
         __opt = 0
 
-        while(opt != 9):            
-			print("Biblioteca")
-			opt = input(print("Digite a opção: 1- Exibir Tudo, 9- Sair,")
-
-            if(opt == 1):
+        while(opt != 9):
+            print("Biblioteca")
+            __opt = input(print("Digite a opção: 1- Exibir Tudo, 9- Sair,")
+            
+            if(__opt == 1):
                self.__b.criarestante()
-            elif(opt == 9):
+            elif(__opt == 9):
                 self.erro()
+
+    def erro(self):
+        print("Erro: opção inválida!")

@@ -54,7 +54,5 @@ class Menu:
                 print("Fim...")
             elif(opt == 9):
                 self.erro()
-                
-            else:
 			
 			

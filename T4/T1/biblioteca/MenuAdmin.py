@@ -2,20 +2,20 @@ from Biblioteca import Biblioteca
 from Livro import Livro
 from Estante import Estante
 from Categoria import Categoria
+from BookNotFound import BookNotFound
 
-class Menu:
+class Menu(BookNotFound):
     def __init__(self):
         self.__b = Biblioteca("Principal")
 
     def menu(self):
         __opt = 0
-
-        while(opt != 9):            
-			print("Controle de Biblioteca")
-			opt = input(print("Digite a opção: 1- Inserir Estante, 2- Inserir Livro, 3- Exibir tudo, 4- Remover Livro, 5- Contar livros de Ciência, 6- Exibir livros de Filosofia, 7- Listar autores, 9- Sair,")
-
-            if(opt == 1):
-               self.__b.criarestante()
+        while(__opt != 9):            
+            print("Controle de Biblioteca")
+            __opt = input(print("Digite a opção: 1- Inserir Estante, 9- Sair")
+            
+                if(opt == 1):
+                   self.__b.criarestante()
             elif(opt == 2):
                 option = self.escolheEstante()
                 self.__b.getEstante(option).insereLivro(self.__b.etEstante(option).criaLivro())
@@ -26,22 +26,18 @@ class Menu:
                 if(i == -1):
                     break
                 int livro;
-					if(b.getEstante(i).getLivro().size()==0)
-						System.out.println("Não há livros para excluir");
-					else {
-						do {
-							System.out.println("Escolha o livro para excluir:");
-							b.getEstante(i).getLivros();
-							livro = Math.max(0,s.nextInt());
-								if (livro >= b.getEstante(i).getLivro().size()) {
-									System.out.println("Livro inválido");
-								}
-								else {
-									b.getEstante(i).removeLivro(b.getEstante(i).getLivro(livro));
-									break;
-								}
-						}
-						while (livro >= b.getEstante(i).getLivro().size());
+					if(b.getEstante(i).getLivro().size()==0):
+						print("Não há livros para excluir")
+					else:
+						while(livro >= b.getEstante(i).getLivro().size()):
+							print("Escolha o livro para excluir:");
+							b.getEstante(i).getLivros()
+							livro = max(0,input("Digite Escolha: "))
+								if (livro >= b.getEstante(i).getLivro().size()):
+									print("Livro inválido")								
+								else:
+									b.getEstante(i).removeLivro(b.getEstante(i).getLivro(livro))								
+								
             elif(opt == 5):
                 print(self.__b.contarCiencia())
             elif(opt == 6):
@@ -54,7 +50,41 @@ class Menu:
                 print("Fim...")
             elif(opt == 9):
                 self.erro()
-                
-            else:
+
+def erro(self):		
+	print("Erro: Opção inválida")
+	
+def escolheEstante(self):
+    __opt
+	if (b.getEstante().size() == 0):
+        print("Não há estantes disponíveis na biblioteca.")
+		return -1
+	else:
+		while(len(opt >= b.getEstante()):
+                __y = 0
+				print("Escolha a estante:")
+				for (estante in Estante()):
+					print("Estante " + y + ":" + b.estante.getNome())
+					y++
+	
+				opt = Math.max(0, input("Digite opção: "));
+				if (opt >= len(b.getEstante())):
+					print("Estante inválida.")
 			
-			
+		return opt
+	
+	def MetodoException(Exception):
+		__i = self.escolheEstante()
+		__livro
+		
+        if(len.(getEstante(i).getLivro())==0):
+			print("Não há livros para excluir")
+		else:
+			print("Escolha o livro para excluir:")
+			b.getEstante(i).getLivros()
+			livro = input(print("Digite sua opção"))
+					if(livro<0 or livro > i):
+						throw BookNotFound("Livro não encontrado")
+                        #BookNotFound("Livro não encontrado")
+					else:
+						b.getEstante(i).removeLivro(b.getEstante(i).getLivro(livro))
