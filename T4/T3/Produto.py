@@ -8,7 +8,7 @@ class Produto:
         self.__imposto = __imposto
 
     def getPreco(self):
-        return self.__preco * self.__imposto._aliquota
+        return self.__preco * self.__imposto.getAliquota()
 
     def getNome(self):
         return self.__nome
