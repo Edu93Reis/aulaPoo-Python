@@ -11,7 +11,7 @@ class Login:
         self.__bibliotecario = "bibliotecario"
 
     def Validation(self):
-        m = new Menu()
+        m = Menu()
         x = []
         x = m.menu()
         if(x[0] in self.__admin and x[1] in admin):
