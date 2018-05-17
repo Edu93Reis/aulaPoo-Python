@@ -21,12 +21,12 @@ class Biblioteca:
         return self.__estante
 
     def inserirEstante(self, __estante):
-        if(self.__estante is not Null):
+        if(self.__estante is not None):
             self.__estante.append(__estante)
         else:
             print("Entre com valor válido")
 
-    def criarestante(self):
+    def criarEstante(self):
         __nome = ""
         __categoria = ""
         while(__nome == "" or __categoria == ""):
@@ -44,33 +44,32 @@ class Biblioteca:
     
     def listarfilosofia(self):
         __novo = []
-        for(estante in self.__estante):
-            print estante
-            #if(estante.getCategoria() == Categoria.Categoria.Filosofia):
-                #for(livro in self.__estante):
-                #    __novo.append(estante).livro.getLivro()
+        for estante in self.__estante:
+            if(estante.getCategoria() == Categoria.Categoria.Filosofia):
+                for livro in self.__estante:
+                   __novo.append(estante).livro.getLivro()
                     #novo.append(estante).getLivro()
-    return __novo
+        return __novo
 
     def contarCiencia(self):    
         __cont = 0
-        for(estante in Estante):
+        for estante in self.__estante:
             if(estante.getCategoria() == Categoria.Categoria.Ciência):
-                __cont = __cont+ self.estante.len(getLivro())
+                __cont = __cont + self.__estante.len(estante.getLivro())
         return __cont
 
     def listarAutores(self):
         lista = []
-        for(estante in Estante):
-            if(estante.getCategoria() == cat):
-                for(livro in Livro):
+        for estante in self.__estante:
+            if(estante.getCategoria() == Categoria.Categoria.CIÊNCIA):
+                for livro in self.__livro:
                     lista.append(estante.livro.getAutor())
         if(len(lista) == 0):
-            print "Não há autores nesta lista"
-    return lista
+            print("Não há autores nesta lista")
+        return lista
 
     def listarTudo(self):
-        for(estante in self.__estante):
+        for estante in self.__estante:
             print("Estante:", estante.getNome())
             estante.getLivro()
 

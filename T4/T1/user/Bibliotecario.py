@@ -1,10 +1,10 @@
-from user.User import User
-from Biblioteca.Menu import Menu
+from User import User
+from biblioteca.MenuBibliotecario import MenuBibliotecario
 
 class Bibliotecario(User):
     def __init__(self):
         super(self).__init__
 
     def Login(self):
-        MenuBibliotecario m = MenuBibliotecario()
+        m = MenuBibliotecario()
         m.menu()

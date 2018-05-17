@@ -2,7 +2,7 @@ from Biblioteca import Biblioteca
 from Livro import Livro
 from Estante import Estante
 from Categoria import Categoria
-form BookNotFound import BookNotFound
+from BookNotFound import BookNotFound
 
 class MenuBibliotecario(BookNotFound):
     def __init__(self):
@@ -12,9 +12,9 @@ class MenuBibliotecario(BookNotFound):
         __opt = 0
 
         while(__opt != 9):            
-			print("Controle de Biblioteca")
-			__opt = input(print("Digite a opção: 1- Inserir Livro, 2- Remover Livro, 9- Sair,")
-
+            print("Controle de Biblioteca")
+            __opt = input(print("Digite a opção: 1- Inserir Livro, 2- Remover Livro, 9- Sair,"))
+            
             if(__opt == 1):
                self.__b.criarestante()
 

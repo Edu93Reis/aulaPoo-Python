@@ -10,12 +10,12 @@ class MenuGuest:
     def menu(self):
         __opt = 0
 
-        while(opt != 9):
+        while(__opt != 9):
             print("Biblioteca")
-            __opt = input(print("Digite a opção: 1- Exibir Tudo, 9- Sair,")
+            __opt = input(print("Digite a opção: 1- Exibir Tudo, 9- Sair,"))
             
             if(__opt == 1):
-               self.__b.criarestante()
+               self.__b.criarEstante()
             elif(__opt == 9):
                 self.erro()
 
