@@ -3,10 +3,9 @@ from Livro import Livro
 from Categoria import Categoria
 
 class Biblioteca:
-    __e = Estante()
-    __estante = [__e]
     
     def __init__(self, __nome):
+        __estante = []
         self.__nome = __nome
         self.__estante = __estante
 
@@ -17,7 +16,7 @@ class Biblioteca:
         if(self.__estante(i) in self.__estante):
             return self.__estante(i)
 
-    def getEstante(self):
+    def getEstantes(self):
         return self.__estante
 
     def inserirEstante(self, __estante):
