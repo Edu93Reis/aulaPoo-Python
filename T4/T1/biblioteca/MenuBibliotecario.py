@@ -18,11 +18,11 @@ class MenuBibliotecario(BookNotFound):
             if(__opt == 1):
                self.__b.criarestante()
 
-               option = self.escolheEstante()
-               self.__b.getEstante(option).insereLivro(self.__b.etEstante(option).criaLivro())
+               option = self.__b.escolheEstante()
+               self.__b.getEstante(option).insereLivro(self.__b.estante(option).criaLivro())
             elif(__opt == 2):
                 try:
-                    self.MetodoException
+                    self.MetodoException()
                 except BookNotFound as e:
                     print(e.getMessage())
             elif(__opt == 9):
@@ -34,34 +34,34 @@ class MenuBibliotecario(BookNotFound):
     def escolherEstante(self):
         __opt
 
-        if(len(b.getEstante()) == 0):
+        if(len(self.__b.getEstante()) == 0):
             print("Não há estantes disponíveis na biblioteca")
             return -1
         else:
-            while(__opt >= len(b.getEstante())):
+            while(__opt >= len(self.__b.getEstante())):
                 __y = 0
-                for estante in b.getEstante():
-                    print("Estante ",__y,": ",b.estante.getNome())
+                for estante in self.__b.getEstante():
+                    print("Estante ",__y,": ", self.__b.estante.getNome())
                     __y+=1
                     
                 __opt = input("Escolha a estante: ")
 
-                if(__opt >= len(b.getEstante())):
+                if(__opt >= len(self.__b.getEstante())):
                     print("Estante inválida!")
 
         return __opt    
     
-    def BookNotFound(self, Exception):
+    def MetodoException(self, BookNotFound):
         __i = self.escolheEstante()
-        __livro
-        if(len(b.getEstante(i).getLivro())==0):
+        __livro = 0
+        if(len(self.__b.getEstante(__i).getLivro())==0):
             print("Não há livros para excluir")
         else:
             print("Escolha o livro para excluir:")
-            b.getEstante(i).getLivros()
+            self.__b.getEstante(__i).getLivros()
             
             __livro = input("Dgite livro escolhido: ")
-            if(__livro<0 or __livro > i):
-                throw BookNotFound("Livro não encontrado")					
+            if(__livro < 0 or __livro > __i):
+                raise BookNotFound("Livro não encontrado")					
             else:
-			    b.getEstante(i).removeLivro(b.getEstante(i).getLivro(livro))
+                self.__b.getEstante(__i).removeLivro(self.__b.getEstante(i).getLivro(__livro))
