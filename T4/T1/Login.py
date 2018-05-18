@@ -14,19 +14,19 @@ class Login:
         m = Menu()
         x = []
         x = m.menu()
-        if(x[0] in self.__admin and x[1] in admin):
-			temp = Admin()
-			return temp
-		elif(x[0] in bibliotecario and x[1] in bibliotecario):
-			temp = Bibliotecario()
-			return temp
-		elif(x[0] in guest and x[1] in guest):
-			temp = Guest()
-			return temp
-		}
-		return Null
+        if(x[0] in self.__admin and x[1] in self.__admin):
+            temp = Admin()
+            return temp
+        elif(x[0] in self.__bibliotecario and x[1] in self.__bibliotecario):
+            temp = Bibliotecario()
+            return temp
+        elif(x[0] in self.__guest and x[1] in self.__guest):
+            temp = Guest()
+            return temp
+            
+        return None
 
     def CallMenu(self, x):
-        if(x == Null):
+        if(x == None):
             print("Fim")
         x.Login()

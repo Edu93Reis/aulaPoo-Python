@@ -21,6 +21,9 @@ class Estante:
             print("Ano:", livro.getAno())
             __y+=1
 
+    def returnLivro(self):
+        return self.__livros
+
     def getLivro(self, __nome):
         for livro in self.__livros:
             if(__nome in livro):

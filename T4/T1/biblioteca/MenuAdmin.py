@@ -25,7 +25,7 @@ class MenuAdmin(BookNotFound):
                 self.__b.listarTudo()
             elif(__opt == 4):
                 i = self.escolheEstnate()
-
+				
 				if(i == -1):
     				pass
 					if(b.getEstante(i).getLivro().size() == 0):
