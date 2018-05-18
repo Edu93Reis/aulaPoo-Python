@@ -23,12 +23,12 @@ class MenuBibliotecario(BookNotFound):
             elif(__opt == 2):
                 try:
                     self.MetodoException
-                except Exception(BookNotFound e):
+                except BookNotFound as e:
                     print(e.getMessage())
             elif(__opt == 9):
                 self.erro()
-
-	def erro(self):
+                
+    def erro(self):
         print("Erro: opção inválida!")
 
     def escolherEstante(self):
@@ -40,9 +40,9 @@ class MenuBibliotecario(BookNotFound):
         else:
             while(__opt >= len(b.getEstante())):
                 __y = 0
-                for(estante in b.getEstante()):
+                for estante in b.getEstante():
                     print("Estante ",__y,": ",b.estante.getNome())
-                    __y++
+                    __y+=1
                     
                 __opt = input("Escolha a estante: ")
 
@@ -50,17 +50,18 @@ class MenuBibliotecario(BookNotFound):
                     print("Estante inválida!")
 
         return __opt    
-        
-	def BookNotFound(self, Exception):
-		__i = self.escolheEstante()
-		__livro
-		if(len(b.getEstante(i).getLivro())==0)
-			print("Não há livros para excluir")
-		else:
-			print("Escolha o livro para excluir:")
-				b.getEstante(i).getLivros()
-				__livro = input("Dgite livro escolhido: ")
-					if(__livro<0 or __livro > i):
-						throw BookNotFound("Livro não encontrado")					
-					else
-						b.getEstante(i).removeLivro(b.getEstante(i).getLivro(livro))
+    
+    def BookNotFound(self, Exception):
+        __i = self.escolheEstante()
+        __livro
+        if(len(b.getEstante(i).getLivro())==0):
+            print("Não há livros para excluir")
+        else:
+            print("Escolha o livro para excluir:")
+            b.getEstante(i).getLivros()
+            
+            __livro = input("Dgite livro escolhido: ")
+            if(__livro<0 or __livro > i):
+                throw BookNotFound("Livro não encontrado")					
+            else:
+			    b.getEstante(i).removeLivro(b.getEstante(i).getLivro(livro))

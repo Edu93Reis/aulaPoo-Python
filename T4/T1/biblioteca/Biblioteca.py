@@ -54,8 +54,7 @@ class Biblioteca:
         __i = 0
         for estante in self.__estante:
             if(estante.getCategoria() == Categoria.Categoria.Filosofia):
-                __novo.append(estante).livro.returnLivro()
-                #while __i < len(estante.returnLivro()):
+                __novo.append(estante).livro.returnLivro()                
         return __novo
 
     def contarCiencia(self):    

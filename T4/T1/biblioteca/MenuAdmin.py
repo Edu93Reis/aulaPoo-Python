@@ -23,31 +23,20 @@ class MenuAdmin(BookNotFound):
                     self.__b.etEstante(option).criaLivro())
             elif(__opt == 3):
                 self.__b.listarTudo()
-            elif(__opt == 4):
-                i = self.escolheEstnate()
-				
-				if(i == -1):
-    				pass
-					if(b.getEstante(i).getLivro().size() == 0):
-						print("Não há livros para excluir")
-					else:
-						while(livro >= b.getEstante(i).getLivro().size()):
-							print("Escolha o livro para excluir:");
-							b.getEstante(i).getLivros()
-							livro = max(0, input("Digite Escolha: "))
-								if (livro >= b.getEstante(i).getLivro().size()):
-									print("Livro inválido")
-								else:
-									b.getEstante(i).removeLivro(b.getEstante(i).getLivro(livro))
-
-            elif(opt == 5):
+			elif(__opt == 4):
+    			try:
+               		i = self.escolheEstnate()
+				except BookNotFound as e:
+					print(e.getMessage())
+            elif(__opt == 5):
                 print(self.__b.contarCiencia())
-            elif(opt == 6):
+            elif(__opt == 6):
 
             elif(opt == 7):
+    			__w=0
                 cat = self.__b.escolherCategoria()
-                for(int w=0; w < b.listarAutores(cat).size(); w++):
-                    print(self.__b.listarAutores(cat).get(w))
+                for biblioteca in self.__b:
+                    print(biblioteca.listarAutores(cat))
             elif(opt == 8):
                 print("Fim...")
             elif(opt == 9):
