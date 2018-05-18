@@ -23,17 +23,23 @@ class MenuAdmin(BookNotFound):
                     self.__b.etEstante(option).criaLivro())
             elif(__opt == 3):
                 self.__b.listarTudo()
-			elif(__opt == 4):
-    			try:
-               		i = self.escolheEstnate()
-				except BookNotFound as e:
-					print(e.getMessage())
+            elif(__opt == 4):
+                try:
+               		self.MetodoException()
+                except BookNotFound as e:
+                    print()
+					#print(e.getMessage())
             elif(__opt == 5):
                 print(self.__b.contarCiencia())
             elif(__opt == 6):
-
+                if(len(self.__b.listarfilosofia()) == 0):
+                    print("Não há livros de filosofia")
+                else:
+                    __x = 0
+                    while(__x < len(self.__b.listarfilosofia())):
+                        print(self.__b.listarfilosofia().get(__x).getNome())
             elif(opt == 7):
-    			__w=0
+                __w=0
                 cat = self.__b.escolherCategoria()
                 for biblioteca in self.__b:
                     print(biblioteca.listarAutores(cat))
@@ -42,42 +48,48 @@ class MenuAdmin(BookNotFound):
             elif(opt == 9):
                 self.erro()
 
+class safelist(list):
+    def get(self, index):
+        try:
+            return self.__getitem__(index)
+        except IndexError:
+            return default
 
 def erro(self):
 	print("Erro: Opção inválida")
 
 
 def escolheEstante(self):
-    __opt
-	if (b.getEstante().size() == 0):
+    __opt = 0
+    if (self.__b.getEstante().size() == 0):
         print("Não há estantes disponíveis na biblioteca.")
-		return -1
-	else:
-		while(len(opt >= b.getEstante()):
-                __y=0
-				print("Escolha a estante:")
-				for (estante in Estante()):
-					print("Estante " + y + ":" + b.estante.getNome())
-					y++
+        return -1
+    else:        
+        __x = 0
+        __y = 0
+        while __opt >= len(self.__b.getEstantes()):                                
+                print("Escolha a estante:")
+                for __x <= len(self.__b.getEstantes()):
+                    print("Estante " + __y + ":" + self.__b.getEstante(__x).getNome())
+                    __y+=1
+                    
+                    __opt=Math.max(0, input(print("Digite opção: ")))
+                    if __opt >= len(b.getEstante()):
+                        print("Estante inválida.")
+                        
+        return __opt
+        
+    def MetodoException(Exception):
+        __i=self.escolheEstante()
+        __livro
 
-				opt=Math.max(0, input("Digite opção: "));
-				if (opt >= len(b.getEstante())):
-					print("Estante inválida.")
-
-		return opt
-
-	def MetodoException(Exception):
-		__i=self.escolheEstante()
-		__livro
-
-        if(len.(getEstante(i).getLivro()) == 0):
-			print("Não há livros para excluir")
-		else:
-			print("Escolha o livro para excluir:")
-			b.getEstante(i).getLivros()
-			livro=input(print("Digite sua opção"))
-					if(livro < 0 or livro > i):
-						throw BookNotFound("Livro não encontrado")
-                        # BookNotFound("Livro não encontrado")
-					else:
-						b.getEstante(i).removeLivro(b.getEstante(i).getLivro(livro))
+        if(len(self.__b.getEstante(__i).getLivro()) == 0):
+            print("Não há livros para excluir")
+        else:
+            print("Escolha o livro para excluir:")
+            self.__b.getEstante(__i).getLivros()
+            livro=input(print("Digite sua opção"))
+            if(livro < 0 or livro > __i):
+                raise BookNotFound("Livro não encontrado")
+            else:
+                self.__b.getEstante(__i).removeLivro(self.__b.getEstante(__i).getLivro(livro))
